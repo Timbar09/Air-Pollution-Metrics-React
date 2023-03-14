@@ -1,5 +1,4 @@
-import { NavLink } from 'react-router-dom';
-
+import CountryItem from './countryItem';
 import countriesData from '../../countriesArray';
 
 const CountriesList = () => (
@@ -10,11 +9,7 @@ const CountriesList = () => (
 
     <ul className="row">
       {countriesData.map((data) => (
-        <li key={data.country} className="col-3 p-1 mb-2">
-          <NavLink style={{ width: '100%' }} className=" p-2 border" to="/stats">
-            <h3>{data.country}</h3>
-          </NavLink>
-        </li>
+        <CountryItem key={data.country} data={data} />
       ))}
     </ul>
   </div>
