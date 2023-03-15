@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 
 import StatsItem from './StatsItem';
 
-import { fetchStats } from '../../redux/stats/statsSlice';
+import { fetchStats } from '../redux/stats/statsSlice';
 
 const StatsList = () => {
   const { stats } = useSelector((state) => state.stats);

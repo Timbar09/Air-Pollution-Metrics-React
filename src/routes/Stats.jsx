@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 
-import StatsList from '../components/stats/StatsList';
+import StatsList from '../components/StatsList';
 
 const Stats = () => (
   <div>

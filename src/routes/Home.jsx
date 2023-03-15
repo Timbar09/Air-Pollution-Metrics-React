@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 
-import CountriesList from '../components/countries/CountriesList';
+import CountriesList from '../components/CountriesList';
 
 const Home = () => (
   <div>
