@@ -39,10 +39,6 @@ body {
   }
 }
 
-.no-scroll {
-  overflow: hidden;
-}
-
 h1,
 h2,
 h3,
@@ -68,22 +64,6 @@ a {
   display: inline-block;
 }
 
-@media (min-width: 768px) {
-  .active {
-    border-bottom: solid 3px var(--clr-dark);
-    color: var(--clr-dark);
-  }
-}
-
 .main {
-  padding-top: 7rem;
   background-color: var(--clr-light);
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 10;
 }
