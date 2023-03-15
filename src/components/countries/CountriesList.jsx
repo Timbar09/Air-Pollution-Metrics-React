@@ -14,5 +14,4 @@ const CountriesList = () => (
     </ul>
   </div>
 );
-
 export default CountriesList;

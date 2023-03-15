@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const CountryItem = ({ data }) => (
   <li className="col-3 p-1 mb-2">
-    <NavLink style={{ width: '100%' }} className=" p-2 border" to="/stats">
+    <Link
+      to={`/stats?lat=${data.latitude}&lon=${data.longitude}`}
+      style={{ width: '100%' }}
+      className=" p-2 border"
+    >
       <h3>{data.country}</h3>
       <p>{data.capital}</p>
       <span>{`Lat: ${data.latitude}`}</span>
       <span>{`Lon: ${data.longitude}`}</span>
-    </NavLink>
+    </Link>
   </li>
 );
 
