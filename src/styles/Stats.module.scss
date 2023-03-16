@@ -1,0 +1,17 @@
+.hero {
+  padding: 2rem 0;
+  background-color: rgba(2, 35, 28, 0.5);
+
+  &_container {
+    background-image: url('../Images/connected.png');
+  }
+
+  &_title {
+    display: grid;
+    place-items: center;
+  }
+
+  &_img {
+    width: 100%;
+  }
+}

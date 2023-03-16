@@ -1,8 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+import countriesData from '../../countriesArray';
+
 const initialState = {
   stats: [],
+  country: '',
+  capital: '',
   isLoading: true,
 };
 
@@ -30,7 +34,11 @@ export const fetchStats = createAsyncThunk('stats/fetchStats', async ({ lat, lon
       value,
     }));
 
-    return componentArray;
+    const { country, capital } = countriesData.find(
+      (data) => data.latitude.toString() === lat && data.longitude.toString() === lon,
+    );
+
+    return [country, capital, componentArray];
   } catch (error) {
     return error.message;
   }
@@ -50,7 +58,10 @@ export const statsSlice = createSlice({
       .addCase(fetchStats.fulfilled, (state, action) => {
         const newState = { ...state };
         newState.isLoading = false;
-        newState.stats = action.payload;
+        const [country, capital, array] = action.payload;
+        newState.country = country;
+        newState.capital = capital;
+        newState.stats = array;
         return newState;
       });
   },

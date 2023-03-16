@@ -1,0 +1,33 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--clr-dark-green);
+
+  &_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-size: 1em;
+    }
+  }
+
+  &_link {
+    padding: 0.45em;
+    font-size: 1.25em;
+    line-height: 1;
+    border-radius: 50%;
+    transition: background-color 150ms ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-opaque);
+      color: currentColor;
+    }
+  }
+
+  &_gear {
+    font-size: 1.25em;
+  }
+}
