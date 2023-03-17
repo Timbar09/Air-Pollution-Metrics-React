@@ -2,7 +2,7 @@
 
 <div>
 
-  <h1><b>React & Redux Group Project Space Traveler's Hub</b></h1><br/><br/>
+  <h1><b>Air-Pollution-Metrics-React</b></h1><br/><br/>
 
 </div>
 
@@ -27,9 +27,13 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 React & Redux Group Project Space Traveler's Hub<a name="about-project"></a>
+# 📖 Air-Pollution-Metrics-React <a name="about-project"></a>
 
-**React & Redux Group Project Space Traveler's Hub** is a web application that displays commercial and scientific space travel services. The application fetches real live data from the SpaceX API. The application allows users to interact with it by booking rockets and joining selected space missions. It was built using React.js, Redux-toolkit, Bootstrap, React-Bootstrap, and Rest APIs.
+This is a web application that displays green-house gas emission data in Eurppean countries.
+
+The application fetches real live data from the Air pollution API. The application allows users to interact with it by clicking on a specific country which will then display the gas stats for that country's capital.
+
+It was built using React.js, Redux-toolkit, Sass, Bootstrap, React-Bootstrap, and Rest APIs.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -38,19 +42,16 @@
 <summary>Client</summary>
 <ul>
   <li><a href="https://reactjs.org/">React.js</a></li>
+  <li><a href="https://sass-lang.com/">Sass</a></li>
   <li><a href="https://react-bootstrap.github.io/">React Bootstrap</a></li>
-  <li><a href="https://vitejs.dev/">Vite</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5">HTML5</a></li>
 </ul>
 
 ### Key Features <a name="key-features"></a>
 
 - **Single Page App**
 
-- **Redux toolkit**
-
-- **Redux thunk**
-
-- **ES6**
+- **Search bar**
 
 - **Gitflow**
 
@@ -60,7 +61,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Visit [live site](https://spacetravelershub-react.onrender.com/).
+- Visit [live site](https://air-pollution-europe-7576b1.netlify.app/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -86,14 +87,14 @@ To clone this repository to your desired folder, follow the steps below:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Timbar09/React-Redux-Group-Project-Space-Travelers-Hub.git
+  git clone https://github.com/Timbar09/Air-Pollution-Metrics-React.git
 ```
 
 **Using GitHub Desktop app**
 
 - Follow the steps below
 
-  - Visit this link "https://github.com/Timbar09/React-Redux-Group-Project-Space-Travelers-Hub.git"
+  - Visit this link "https://github.com/Timbar09/Air-Pollution-Metrics-React"
   - Click the green button labelled "code"
   - Select the "Open with GitHub Desktop" option
   - After the GitHub Desktop add opens, click the "clone repo" button
@@ -137,12 +138,12 @@ You can deploy this project by running following command:
 | 👤 Author | GitHub | Twitter | LinkedIn |
 | :-- | :-- | :-- | :-- |
 | Miles Mosweu | [@Timbar09](https://github.com/Timbar09) | [@Milez09](https://twitter.com/Milez09) | [@miles09](https://www.linkedin.com/in/miles09) |
-| Shakir | [@shakir]() | [@shakir]() | [@shakir]() |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+- [ ] **Implement a desktop version.**
 - [ ] **Implement more functionality.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -163,9 +164,9 @@ If you like this project, give it a ⭐️ and let me know what you like in part
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank the whole Microverse community for their help and contributions towards this project.
+I would like to thank the whole Microverse community for their help and contributions towards this project.
 
-We would also like to appreciate [Flaticon](https://www.flaticon.com/free-icon/planet_3212567?term=space&page=1&position=19&related_id=3212567&origin=style&k=1678277223176&log-in=google) for the website logo
+I would also like to appreciate [Flaticon](https://www.flaticon.com/) for the home page hero-image and the flag icons.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
