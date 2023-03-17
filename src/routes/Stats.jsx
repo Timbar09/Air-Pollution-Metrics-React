@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { FaChevronLeft } from 'react-icons/fa';
 
 import Header from '../components/Header';
 import StatsList from '../components/StatsList';
@@ -16,7 +15,7 @@ const Stats = () => {
 
   return (
     <>
-      <Header icon={<FaChevronLeft />} />
+      <Header />
 
       <Container className={styles.hero_container}>
         <Row className={styles.hero}>

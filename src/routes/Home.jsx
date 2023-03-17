@@ -1,7 +1,5 @@
 import Container from 'react-bootstrap/Container';
 
-import { BsFillHeartbreakFill } from 'react-icons/bs';
-
 import Header from '../components/Header';
 import CountriesList from '../components/CountriesList';
 
@@ -10,7 +8,7 @@ import heroImg from '../Images/screaming-earth.jpg';
 
 const Home = () => (
   <>
-    <Header icon={<BsFillHeartbreakFill />} />
+    <Header isHome="home" />
     <section className={styes.hero}>
       <figure>
         <div className={styes.hero_backdrop}>

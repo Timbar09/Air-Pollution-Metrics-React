@@ -4,12 +4,14 @@ import PropTypes from 'prop-types';
 
 import Container from 'react-bootstrap/Container';
 
-import { BsFillGearFill } from 'react-icons/bs';
+import { BsFillGearFill, BsFillHeartbreakFill } from 'react-icons/bs';
+import { FaChevronLeft } from 'react-icons/fa';
+
 import { toggleModal } from '../redux/stats/statsSlice';
 
 import styles from '../styles/Header.module.scss';
 
-const Header = ({ icon }) => {
+const Header = ({ isHome }) => {
   const { isModalOpen } = useSelector((state) => state.stats);
   const dispatch = useDispatch();
 
@@ -25,7 +27,8 @@ const Header = ({ icon }) => {
       <Container>
         <nav className={styles.header_nav}>
           <NavLink to="/" className={styles.header_link}>
-            {icon}
+            {isHome && <BsFillHeartbreakFill />}
+            {!isHome && <FaChevronLeft />}
           </NavLink>
 
           <span>Air Pollution Metrics</span>
@@ -44,8 +47,12 @@ const Header = ({ icon }) => {
   );
 };
 
+Header.defaultProps = {
+  isHome: false,
+};
+
 Header.propTypes = {
-  icon: PropTypes.string.isRequired,
+  isHome: PropTypes.bool,
 };
 
 export default Header;

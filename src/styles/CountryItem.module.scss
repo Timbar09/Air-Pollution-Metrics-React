@@ -1,12 +1,4 @@
 .item {
-  &:hover {
-    .item {
-      &_img {
-        animation: waves 1000ms ease-in-out infinite forwards;
-      }
-    }
-  }
-
   &_content {
     display: flex;
     flex-direction: column;
@@ -42,6 +34,14 @@
     outline-offset: 4px;
   }
 
+  &:hover {
+    .item {
+      &_img {
+        animation: waves 1200ms ease-in-out infinite forwards;
+      }
+    }
+  }
+
   &_bottom {
     order: 3;
     text-align: right;
@@ -53,19 +53,13 @@
       outline: solid 1px transparent;
     }
 
-    // 50% {
-    //   outline-offset: -2px;
-    //   outline: solid 1px transparent;
-    // }
-
-    80% {
-      outline-offset: 4px;
+    50% {
       outline: solid 3px var(--clr-light);
     }
 
     to {
       outline-offset: 4px;
-      outline: solid 3px transparent;
+      outline: solid 1px transparent;
     }
   }
 }

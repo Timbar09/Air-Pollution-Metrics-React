@@ -19,10 +19,16 @@ const StatsList = () => {
   const lon = searchParams.get('lon');
 
   useEffect(() => {
-    if (!lat && !lon) throw new Error('Latitude and longitutde unavailable');
+    if (!lat && !lon) {
+      return;
+    }
 
     dispatch(fetchStats({ lat, lon }));
   }, [dispatch, lat, lon]);
+
+  if (!lat || !lon) {
+    return <div>Latitude and longitude unavailable.</div>;
+  }
 
   if (isLoading) {
     return (

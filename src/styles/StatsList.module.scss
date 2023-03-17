@@ -1,3 +1,16 @@
+.list {
+  &_header {
+    background-color: var(--clr-dark-green);
+
+    &_grid {
+      span {
+        color: rgba(249, 249, 249, 0.7);
+        font-size: 0.85em;
+      }
+    }
+  }
+}
+
 .loading {
   max-height: 200px;
   height: 100vh;
@@ -47,18 +60,5 @@
   50% {
     transform: scaleY(1.8);
     background: var(--clr-blue);
-  }
-}
-
-.list {
-  &_header {
-    background-color: var(--clr-dark-green);
-
-    &_grid {
-      span {
-        color: rgba(249, 249, 249, 0.7);
-        font-size: 0.85em;
-      }
-    }
   }
 }
