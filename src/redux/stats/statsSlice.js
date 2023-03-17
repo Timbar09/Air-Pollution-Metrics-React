@@ -15,7 +15,7 @@ const initialState = {
 export const fetchStats = createAsyncThunk('stats/fetchStats', async ({ lat, lon }) => {
   try {
     const response = await axios(
-      `http://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=c821836f2d36b54c9d9432782ae78600`,
+      `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=c821836f2d36b54c9d9432782ae78600`,
     );
 
     const { components } = response.data.list[0];

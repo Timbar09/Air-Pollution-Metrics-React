@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import CountriesList from '../components/CountriesList';
 
 import styes from '../styles/Home.module.scss';
-import heroImg from '../Images/screaming-earth.jpg';
+import heroImg from '../Images/coughing-earth.png';
 
 const Home = () => (
   <>
