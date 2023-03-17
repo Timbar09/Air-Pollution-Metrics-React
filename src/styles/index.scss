@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@400;500;600;800&display=swap');
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  --clr-dark: rgb(2, 35, 28);
+  --clr-dark-green: rgb(0, 77, 37);
+  --clr-solid-green: rgb(17, 130, 59);
+  --clr-opaque: rgba(2, 35, 28, 0.15);
+  --clr-green: rgb(72, 191, 83);
+  --clr-light-green: rgb(145, 240, 134);
+  --clr-light-grey: rgb(230, 230, 230);
+  --clr-light: rgb(249, 249, 249);
+  --clr-white: rgb(255, 255, 255);
+
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: 'Mukta Vaani', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 0.95em;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--clr-light-grey);
+  min-width: 20em;
+  background-color: var(--clr-dark);
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0;
+    color: var(--clr-light);
+    line-height: 1;
+  }
+
+  h1 {
+    font-size: 2.25em;
+  }
+
+  h2 {
+    font-size: 1.05em;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: 400;
+  }
+
+  @media (min-width: 64em) {
+    body {
+      font-size: 1em;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .layout {
+    margin: auto;
+    max-width: 27em;
+    min-height: 100vh;
+    background-color: var(--clr-solid-green);
+  }
+}
