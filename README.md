@@ -33,7 +33,7 @@ This is a web application that displays green-house gas emission data in Eurppea
 
 The application fetches real live data from the Air pollution API. The application allows users to interact with it by clicking on a specific country which will then display the gas stats for that country's capital.
 
-It was built using React.js, Redux-toolkit, Sass, Bootstrap, React-Bootstrap, and Rest APIs.
+See [video demo](https://www.loom.com/share/83eb646a05d242c4881b88d230f90273).
 
 ## 🛠 Built With <a name="built-with"></a>
 
