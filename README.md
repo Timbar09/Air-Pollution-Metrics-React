@@ -166,7 +166,7 @@ If you like this project, give it a ⭐️ and let me know what you like in part
 
 I would like to thank the whole Microverse community for their help and contributions towards this project.
 
-I would also like to appreciate [Flaticon](https://www.flaticon.com/) for the home page hero-image and the flag icons.
+I would also like to appreciate [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) for the design template and [Flaticon](https://www.flaticon.com/) for the home page hero-image and the flag icons.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
