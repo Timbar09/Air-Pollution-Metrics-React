@@ -1,9 +1,15 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+import countriesData from '../../countriesArray';
+
 const initialState = {
   stats: [],
+  country: '',
+  capital: '',
   isLoading: true,
+  isModalOpen: false,
+  searchFilter: false,
 };
 
 export const fetchStats = createAsyncThunk('stats/fetchStats', async ({ lat, lon }) => {
@@ -30,7 +36,11 @@ export const fetchStats = createAsyncThunk('stats/fetchStats', async ({ lat, lon
       value,
     }));
 
-    return componentArray;
+    const { country, capital } = countriesData.find(
+      (data) => data.latitude.toString() === lat && data.longitude.toString() === lon,
+    );
+
+    return [country, capital, componentArray];
   } catch (error) {
     return error.message;
   }
@@ -39,7 +49,27 @@ export const fetchStats = createAsyncThunk('stats/fetchStats', async ({ lat, lon
 export const statsSlice = createSlice({
   name: 'stats',
   initialState,
-  reducers: {},
+  reducers: {
+    toggleModal: (state) => {
+      const newState = { ...state };
+      newState.isModalOpen = !newState.isModalOpen;
+      return newState;
+    },
+    filterCountry: (state, action) => {
+      const newState = { ...state };
+      if (action.payload) {
+        newState.searchFilter = false;
+      } else {
+        newState.searchFilter = true;
+      }
+      return newState;
+    },
+    filterCapital: (state) => {
+      const newState = { ...state };
+      newState.searchFilter = false;
+      return newState;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchStats.pending, (state) => {
@@ -50,10 +80,15 @@ export const statsSlice = createSlice({
       .addCase(fetchStats.fulfilled, (state, action) => {
         const newState = { ...state };
         newState.isLoading = false;
-        newState.stats = action.payload;
+        const [country, capital, array] = action.payload;
+        newState.country = country;
+        newState.capital = capital;
+        newState.stats = array;
         return newState;
       });
   },
 });
+
+export const { toggleModal, filterCapital, filterCountry } = statsSlice.actions;
 
 export default statsSlice.reducer;

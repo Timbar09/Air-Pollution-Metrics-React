@@ -1,14 +1,11 @@
 import { Outlet } from 'react-router-dom';
-
-import Header from './Header';
+import Modal from './Modal';
 
 const Layout = () => (
-  <>
-    <Header />
-    <main className="main">
-      <Outlet />
-    </main>
-  </>
+  <main className="layout">
+    <Modal />
+    <Outlet />
+  </main>
 );
 
 export default Layout;

@@ -1,5 +1,5 @@
 {
-  "name": "green-house-gas-emmisions-stats",
+  "name": "air-pollution-metrics-react",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -20,8 +20,10 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",
+    "sass": "^1.59.3",
     "uuid": "^9.0.0"
   },
   "devDependencies": {
