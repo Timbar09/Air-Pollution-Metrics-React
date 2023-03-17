@@ -1,0 +1,56 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110vh;
+  color: var(--clr-light);
+  background-color: rgba(2, 35, 28, 0.541);
+  backdrop-filter: blur(5px);
+  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+  display: grid;
+  place-items: center;
+  z-index: 1005;
+}
+
+.modal {
+  border-radius: 0.25rem;
+  background-color: var(--clr-dark-green);
+
+  &_cancel {
+    padding: 0.5rem;
+    text-align: right;
+
+    button {
+      padding: 0;
+      border: 0;
+      color: currentColor;
+      font-size: 1.25em;
+      background-color: transparent;
+      transition: color 150ms ease-in-out;
+
+      &:hover {
+        color: rgb(215, 32, 32);
+      }
+    }
+  }
+
+  fieldset {
+    padding: 0 3rem 4rem;
+  }
+
+  legend {
+    font-size: 1.75em;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--clr-light);
+  }
+
+  label {
+    padding: 0.25rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25em;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import Container from 'react-bootstrap/Container';
 import { CgSearch } from 'react-icons/cg';
@@ -10,6 +11,7 @@ import styles from '../styles/CountriesList.module.scss';
 
 const CountriesList = () => {
   const [search, setSearch] = useState('');
+  const { searchFilter } = useSelector((state) => state.stats);
 
   return (
     <div>
@@ -22,7 +24,7 @@ const CountriesList = () => {
               type="text"
               className={`${styles.list_search} py-1 px-3`}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search countries"
+              placeholder={`Search ${searchFilter ? 'capitals' : 'countries'}`}
             />
           </form>
         </Container>
@@ -30,18 +32,22 @@ const CountriesList = () => {
 
       <Container>
         <ul className={`${styles.list_content} row`}>
-          {countriesData
-            .filter((item) =>
-              search.toLocaleLowerCase() === ''
+          {!searchFilter
+            && countriesData
+              .filter((item) => (search.toLocaleLowerCase() === ''
                 ? item
-                : item.country.toLocaleLowerCase().includes(search),
-            )
-            .map((data) => (
-              <CountryItem key={data.country} data={data} />
-            ))}
+                : item.country.toLocaleLowerCase().includes(search)))
+              .map((data) => <CountryItem key={data.country} data={data} />)}
+          {searchFilter
+            && countriesData
+              .filter((item) => (search.toLocaleLowerCase() === ''
+                ? item
+                : item.capital.toLocaleLowerCase().includes(search)))
+              .map((data) => <CountryItem key={data.country} data={data} />)}
         </ul>
       </Container>
     </div>
   );
 };
+
 export default CountriesList;

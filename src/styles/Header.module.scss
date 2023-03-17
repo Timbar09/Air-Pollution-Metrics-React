@@ -12,6 +12,12 @@
     span {
       font-size: 1em;
     }
+
+    button {
+      border: 0;
+      color: inherit;
+      background-color: transparent;
+    }
   }
 
   &_link {

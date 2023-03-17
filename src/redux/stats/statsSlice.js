@@ -8,6 +8,8 @@ const initialState = {
   country: '',
   capital: '',
   isLoading: true,
+  isModalOpen: false,
+  searchFilter: false,
 };
 
 export const fetchStats = createAsyncThunk('stats/fetchStats', async ({ lat, lon }) => {
@@ -47,7 +49,27 @@ export const fetchStats = createAsyncThunk('stats/fetchStats', async ({ lat, lon
 export const statsSlice = createSlice({
   name: 'stats',
   initialState,
-  reducers: {},
+  reducers: {
+    toggleModal: (state) => {
+      const newState = { ...state };
+      newState.isModalOpen = !newState.isModalOpen;
+      return newState;
+    },
+    filterCountry: (state, action) => {
+      const newState = { ...state };
+      if (action.payload) {
+        newState.searchFilter = false;
+      } else {
+        newState.searchFilter = true;
+      }
+      return newState;
+    },
+    filterCapital: (state) => {
+      const newState = { ...state };
+      newState.searchFilter = false;
+      return newState;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchStats.pending, (state) => {
@@ -66,5 +88,7 @@ export const statsSlice = createSlice({
       });
   },
 });
+
+export const { toggleModal, filterCapital, filterCountry } = statsSlice.actions;
 
 export default statsSlice.reducer;

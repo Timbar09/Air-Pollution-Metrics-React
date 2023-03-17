@@ -10,7 +10,9 @@ import { fetchStats } from '../redux/stats/statsSlice';
 import styles from '../styles/StatsList.module.scss';
 
 const StatsList = () => {
-  const { stats, country, capital, isLoading } = useSelector((state) => state.stats);
+  const {
+    stats, country, capital, isLoading,
+  } = useSelector((state) => state.stats);
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
   const lat = searchParams.get('lat');
